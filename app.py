@@ -3,7 +3,6 @@ from flask_cors import cross_origin
 import sklearn
 import pickle
 import pandas as pd
-#from waitress import serve
 import numpy as np
 
 app = Flask(__name__)
@@ -42,53 +41,7 @@ def predict():
         Duration_hour = abs(Arrival_hour - Dep_hour)
         Duration_min = abs(Arrival_min - Dep_min)
        
-        # Total Stops
-        stops = int(request.form["stops"])
         
-        # Airline , Air India  0 not in column
-        Airline= request.form["Airline"]
-        if(Airline =='AirAsia'):
-            AirAsia = 1
-            IndiGo = 0
-            SpiceJet = 0
-            Vistara = 0
-            GoAir = 0
-            
-        elif(Airline =='IndiGo'):
-            AirAsia = 0
-            IndiGo = 1
-            SpiceJet = 0
-            Vistara = 0
-            GoAir = 0
-            
-        elif(Airline =='Spicejet'):
-            AirAsia = 0
-            IndiGo = 0
-            SpiceJet = 1
-            Vistara = 0
-            GoAir = 0
-        
-        elif(Airline =='Vistara'):
-            AirAsia = 0
-            IndiGo = 0
-            SpiceJet = 0
-            Vistara = 1
-            GoAir = 0
-            
-        elif(Airline =='Go Air'):
-            AirAsia = 0
-            IndiGo = 0
-            SpiceJet = 0
-            Vistara = 0
-            GoAir = 1
-            
-        else:
-            AirAsia = 0
-            IndiGo = 0
-            SpiceJet = 0
-            Vistara = 0
-            GoAir = 0
-            
         
         # Departure city
         Dept_city = int(request.form["Dept_city"])
@@ -118,23 +71,17 @@ def predict():
             Dept_city,
             Dept_date,
             arrival_city,
-            stops,
             Dep_hour,
             Dep_min,
             Arrival_hour,
             Arrival_min,
             Duration_hour,
             Duration_min,
-            AirAsia,
-            GoAir,
-            IndiGo,
-            SpiceJet,
-            Vistara,
             E,
             PE
-            ]],columns=['Dept_city', 'Dept_date', 'arrival_city', 'stops','Dep_hour', 'Dep_min',
+            ]],columns=['Dept_city', 'Dept_date', 'arrival_city','Dep_hour', 'Dep_min',
                         'Arrival_hour', 'Arrival_min', 'Duration_hour', 'Duration_min',
-                        'AirAsia', 'GoAir', 'IndiGo', 'Spicejet', 'Vistara', 'E', 'PE'])
+                        'E', 'PE'])
        
         prediction = model.predict(data_to_predict)
         
@@ -160,4 +107,4 @@ def predict():
 if __name__ == "__main__":
     #serve(app, host="127.0.0.1", port=8080)
     #app.run()
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
