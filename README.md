@@ -4,21 +4,13 @@
 
 ## Table of Contents
 
-[Demo](https://linktodocumentation)
-
-[Overview](https://linktodocumentation)
-
-[Objective](https://linktodocumentation)
-
-[Installation](https://linktodocumentation)
-
-[Deployement](https://linktodocumentation)
-
-[Directory Tree](https://linktodocumentation)
-
-[Technologies Used](https://linktodocumentation)
-
-[Future scope of project](https://linktodocumentation)
+ * [Demo](#demo)
+  * [Overview](#overview)
+  * [Motivation](#motivation)
+  * [Installation](#installation)
+  * [Deployement on Heroku](#deployement)
+  * [Directory Tree](#directory-tree)
+  * [Future scope of project](#future-scope)
 
 
 ## Demo
