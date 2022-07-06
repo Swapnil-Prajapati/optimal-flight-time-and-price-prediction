@@ -61,6 +61,7 @@ Login or signup in order to create virtual app. You can either connect your gith
 ```
 ## Technologies Used
 ![madewith](https://raw.githubusercontent.com/Swapnil-Prajapati/optimal-flight-time-and-price-prediction/f35412262d3b5a9e1668c56f007abaf4efa9bcb7/Screenshots/madewith.svg)
+
 ![Flask](https://github.com/Swapnil-Prajapati/optimal-flight-time-and-price-prediction/blob/main/Screenshots/flask.png?raw=true) 
 ![Gunicorn](https://github.com/Swapnil-Prajapati/optimal-flight-time-and-price-prediction/blob/main/Screenshots/gunicorn.png?raw=true)
 ![Sklearn](https://github.com/Swapnil-Prajapati/optimal-flight-time-and-price-prediction/blob/main/Screenshots/scikit.png?raw=true)
