@@ -7,10 +7,10 @@
   * [Demo](#demo)
   * [Overview](#overview)
   * [Installation](#installation)
-  * [Deployement](#deployement)
+  * [Deployment](#deployment)
   * [Directory Tree](#directory-tree)
   * [Technologies Used](#technologies-used)
-  * [Future scope of project](#future-scope)
+  * [Future scope of project](#future-scope-of-project)
 
 
 ## Demo
